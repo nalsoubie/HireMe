@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.hireme.ui.main.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_jobDetailFragment"
+            app:destination="@id/jobDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.hireme.ui.chat.ChatFragment"
+        android:label="chat_fragment"
+        tools:layout="@layout/chat_fragment" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.example.hireme.ui.notification.NotificationFragment"
+        android:label="notification_fragment"
+        tools:layout="@layout/notification_fragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.hireme.ui.profile.ProfileFragment"
+        android:label="profile_fragment"
+        tools:layout="@layout/profile_fragment" />
+    <fragment
+        android:id="@+id/jobDetailFragment"
+        android:name="com.example.hireme.ui.main.subFragment.JobDetailFragment"
+        android:label="jobDetailFragment_fragment"
+        tools:layout="@layout/fragment_job_detail_fragement" >
+        <action
+            android:id="@+id/action_jobDetailFragment_to_mapFragement"
+            app:destination="@id/expandedMapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/expandedMapFragment"
+        android:name="com.example.hireme.ExpandedMapFragment"
+        android:label="fragment_map_fragement"
+        tools:layout="@layout/fragment_map_fragement" />
+</navigation>
